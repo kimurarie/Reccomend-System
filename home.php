@@ -46,6 +46,5 @@ if(isset($_SESSION['user_id'])){
         <a href="board.php">掲示板</a>
     </p>
 
-
 </body>
 </html>

@@ -3,11 +3,8 @@
 // セッションの開始
 session_start();
 
-// データベースの接続情報
-define( 'DB_HOST', 'localhost');
-define( 'DB_USER', 'root');
-define( 'DB_PASS', 'kimurie0810');
-define( 'DB_NAME', 'reccomend_system');
+// DB接続情報
+require("db.php");
 
 // GETメソッドで楽曲IDを取得したとき
 if( isset($_GET['id']) ) {

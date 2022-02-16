@@ -3,17 +3,13 @@
 // セッションの開始
 session_start();
 
-// データベースの接続情報
-define( 'DB_HOST', 'localhost');
-define( 'DB_USER', 'root');
-define( 'DB_PASS', 'kimurie0810');
-define( 'DB_NAME', 'reccomend_system');
+// DB接続情報
+require("db.php");
 
 // 変数の初期化
 $error_message = [];
 $username = $_POST['username'];
 $password=$_POST['password'];
-
 
 if( !empty($_POST['btn_login']) ) {
 

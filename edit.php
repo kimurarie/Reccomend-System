@@ -3,11 +3,8 @@
 // セッションの開始
 session_start();
 
-// データベースの接続情報
-define( 'DB_HOST', 'localhost');
-define( 'DB_USER', 'root');
-define( 'DB_PASS', 'kimurie0810');
-define( 'DB_NAME', 'reccomend_system');
+// DB接続情報
+require("db.php");
 
 // タイムゾーン設定
 date_default_timezone_set('Asia/Tokyo');
@@ -132,6 +129,6 @@ if( !empty($_GET['message_id']) && empty($_POST['message_id']) ) {
     <input type="hidden" name="message_id" value="<?php echo $message_data['id']; ?>">
 	<a class="btn_cancel" href="admin.php">キャンセル</a>
   </form>
-　
+
 </body>
 </html>

@@ -3,11 +3,8 @@
 // セッションの開始
 session_start();
 
-// データベースの接続情報
-define( 'DB_HOST', 'localhost');
-define( 'DB_USER', 'root');
-define( 'DB_PASS', 'kimurie0810');
-define( 'DB_NAME', 'reccomend_system');
+// DB接続情報
+require("db.php");
 
 // タイムゾーン設定
 date_default_timezone_set('Asia/Tokyo');
@@ -20,7 +17,6 @@ $split_data = null;
 $message_array = array();
 $error_message = array();
 $clean = array();
-
 
 if( !empty($_POST['btn_submit']) ) {
 	
@@ -145,7 +141,6 @@ if( $mysqli->connect_errno ) {
 <?php } ?>
 <hr>
 </section>
-
 
 <p>
 <a href="admin.php">管理者ページ</a>
